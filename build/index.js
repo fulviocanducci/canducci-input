@@ -92,7 +92,7 @@ function InputFilter(_ref) {
 
   return _react2.default.createElement(
     "div",
-    { "class": "input-group mb-3" },
+    { className: "input-group mb-3" },
     _react2.default.createElement("input", {
       className: "form-control",
       type: "text",
@@ -101,12 +101,12 @@ function InputFilter(_ref) {
     }),
     _react2.default.createElement(
       "div",
-      { "class": "input-group-append" },
+      { className: "input-group-append" },
       _react2.default.createElement(
         "button",
         {
           onClick: eventButtonClick,
-          "class": "btn btn-outline-secondary",
+          className: "btn btn-outline-secondary",
           type: "button",
           id: "button-addon2"
         },
