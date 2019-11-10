@@ -14,10 +14,10 @@ function InputFilter({
         value={value}
         onChange={eventValueChange}
       />
-      <div class="input-group-append">
+      <div className="input-group-append">
         <button
           onClick={eventButtonClick}
-          class="btn btn-outline-secondary"
+          className="btn btn-outline-secondary"
           type="button"
           id="button-addon2"
         >
