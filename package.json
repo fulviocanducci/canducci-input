@@ -4,7 +4,10 @@
   "description": "Canducci Input",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "preconstruct build",
+    "watch": "preconstruct watch",
+    "release": "yarn build && changeset publish"
   },
   "repository": {
     "type": "git",
