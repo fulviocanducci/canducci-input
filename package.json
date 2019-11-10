@@ -1,6 +1,6 @@
 {
   "name": "canducci-input",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Canducci Input",
   "main": "build/index.js",
   "scripts": {

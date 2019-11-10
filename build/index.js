@@ -64,11 +64,17 @@ module.exports =
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ (function(module, exports) {
+
+module.exports = require("react");
+
+/***/ }),
+/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -78,7 +84,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _react = __webpack_require__(2);
+var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -119,7 +125,7 @@ function InputFilter(_ref) {
 exports.default = InputFilter;
 
 /***/ }),
-/* 1 */
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -128,21 +134,68 @@ exports.default = InputFilter;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.InputFilter = undefined;
 
-var _inputFilter = __webpack_require__(0);
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function InputRange(_ref) {
+  var description = _ref.description,
+      value = _ref.value,
+      min = _ref.min,
+      max = _ref.max,
+      step = _ref.step,
+      eventValueChange = _ref.eventValueChange;
+
+  return _react2.default.createElement(
+    "div",
+    { className: "input-group mb-3" },
+    _react2.default.createElement(
+      "label",
+      { "for": "formControlRange" },
+      description
+    ),
+    _react2.default.createElement("input", {
+      type: "range",
+      min: min || 0,
+      max: max || 100,
+      step: step || 1,
+      value: value || 0,
+      "class": "form-control-range",
+      id: "formControlRange",
+      onChange: eventValueChange
+    })
+  );
+}
+
+exports.default = InputRange;
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.InputRanger = exports.InputFilter = undefined;
+
+var _inputFilter = __webpack_require__(1);
 
 var _inputFilter2 = _interopRequireDefault(_inputFilter);
+
+var _inputRange = __webpack_require__(2);
+
+var _inputRange2 = _interopRequireDefault(_inputRange);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.InputFilter = _inputFilter2.default;
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports) {
-
-module.exports = require("react");
+exports.InputRanger = _inputRange2.default;
 
 /***/ })
 /******/ ]);
