@@ -1,14 +1,14 @@
 {
   "name": "canducci-input",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Canducci Input",
-  "main": "dist/index.js",
+  "main": "build/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "preconstruct build",
-    "watch": "preconstruct watch",
-    "git": "git add . && git commit -m",
-    "gitpull": "git pull origin master",
+    "start": "webpack --watch",
+    "build": "webpack",
+    "gitcommit": "git add . && git commit -m",
+    "gitpush": "git push origin master",
     "release": "yarn build && changeset publish"
   },
   "repository": {
@@ -25,13 +25,21 @@
   },
   "homepage": "https://github.com/fulviocanducci/canducci-input#readme",
   "files": [
-    "dist"
+    "build"
   ],
   "peerDependencies": {
-    "react": "^16.x",
-    "react-dom": "^16.x"
+    "react": "^16.x"
   },
   "dependencies": {
-    "rollup": "^1.26.4"
+    "react": "^16.x",
+    "webpack": "^2.x"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.x",
+    "babel-core": "^6.x",
+    "babel-loader": "^7.x",
+    "babel-plugin-transform-object-rest-spread": "^6.x",
+    "babel-plugin-transform-react-jsx": "^6.x",
+    "babel-preset-env": "^1.x"
   }
 }

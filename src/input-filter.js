@@ -7,7 +7,7 @@ function InputFilter({
   labelButton
 }) {
   return (
-    <div class="input-group mb-3">
+    <div className="input-group mb-3">
       <input
         className="form-control"
         type="text"
