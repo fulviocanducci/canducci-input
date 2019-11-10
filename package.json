@@ -2,11 +2,13 @@
   "name": "canducci-input",
   "version": "0.0.1",
   "description": "Canducci Input",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "preconstruct build",
     "watch": "preconstruct watch",
+    "git": "git add . && git commit -m",
+    "gitpull": "git pull origin master",
     "release": "yarn build && changeset publish"
   },
   "repository": {
@@ -23,11 +25,13 @@
   },
   "homepage": "https://github.com/fulviocanducci/canducci-input#readme",
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
+  "peerDependencies": {
+    "react": "^16.x",
+    "react-dom": "^16.x"
+  },
   "dependencies": {
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0"
+    "rollup": "^1.26.4"
   }
 }
